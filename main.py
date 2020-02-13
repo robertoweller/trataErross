@@ -2,11 +2,14 @@
 try:
 
     x = '''
+f = '231'
+len(f)
 
+print '12345678'
 
-print '1234567891011121314151617181920'
+xxx = 54546
 
-print '0'
+print 'roberto'
 
 '''
     # Executa o texto.
@@ -33,10 +36,31 @@ except SyntaxError as erro:
     # O erro tem 63 letras contando de 0.
     print(f'{test} é do tipo >> {type(test)} \n')
     print('-----------Apartir daqui o codigo corrigido------------------------')
+    # Cria uma lista
+    y = x.split('\n')
 
-    x = x.replace(texto, test)
+#    print(texto)
 
-    print(f'\n{x}')
+#    x = x.replace(texto, test)
+    # Bora achar os prints
+    ad = 0
+    for g in y:
+        ad += 1
+        print(f'{g[0:5]}')
+
+        # Acessa o que esta dentro do print.
+        if g[0:5] == 'print':
+            ad += 1
+
+            # Tem que ser menos 1, porque a lista começa de 0
+            print(f'{y}')
+            #
+            # print(f'{len(y[ad-1])}', end='\n')
+            ad -= 1
+
+    #####
+
+    print(f'\n\n {y[1]}')
 
 
 # Deixa para executar o codigo depois
