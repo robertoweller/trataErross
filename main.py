@@ -38,6 +38,7 @@ except SyntaxError as erro:
     print('-----------Apartir daqui o codigo corrigido------------------------')
     # Cria uma lista
     y = x.split('\n')
+    print()
 
 #    print(texto)
 
@@ -46,21 +47,23 @@ except SyntaxError as erro:
     ad = 0
     for g in y:
         ad += 1
-        print(f'{g[0:5]}')
+
+        #print(f'{g[0:5]}')
 
         # Acessa o que esta dentro do print.
+        # g vai me retornar o erro.
         if g[0:5] == 'print':
             ad += 1
-
+            print(f'{g}')
             # Tem que ser menos 1, porque a lista começa de 0
-            print(f'{y}')
+            print(f'print({y[ad-2][6:]})')
             #
             # print(f'{len(y[ad-1])}', end='\n')
             ad -= 1
 
     #####
 
-    print(f'\n\n {y[1]}')
+    print(f'\n\n {y}')
 
 
 # Deixa para executar o codigo depois
